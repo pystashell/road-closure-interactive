@@ -29,6 +29,11 @@ assert.equal(
   "Exact entry URL must serve HTML without requiring a trailing slash",
 );
 const html = await response.text();
+assert.match(response.headers.get("cache-control") || "", /no-transform/);
+assert.doesNotMatch(html, /static\.cloudflareinsights\.com/);
+report.checks.push(
+  "HTML is served without inherited third-party analytics injection",
+);
 assert.match(html, /芝加哥赛事封路地图/);
 assert.ok(
   response.headers

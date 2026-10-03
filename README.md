@@ -8,6 +8,8 @@
 
 `vite.config.js` 设定资源基路径 `/chicago/marathon2026/`，构建后将完整静态资源复制到对应目录，并保留原根目录入口。Cloudflare Custom Domain 仅绑定 `road-closure.catseye.today`；`assets.html_handling = "drop-trailing-slash"` 使指定路径直接返回页面，尾斜杠版本规范化到无尾斜杠。没有修改父域或其他主机的内容，也不需要运行时 Worker 路径重写。
 
+HTML 响应设置 `Cache-Control: public, max-age=0, must-revalidate, no-transform`，按 [Cloudflare 官方说明](https://developers.cloudflare.com/web-analytics/get-started/) 防止区域级 Web Analytics 自动注入外部脚本；无需修改其他网站的统计设置。数据文件仍缓存一小时。`scripts/check-deployment.mjs` 核验准确路径、响应头、资源 SHA-256、构建提交与尾斜杠跳转。
+
 ## 使用与开发
 
 需要 Node.js 22.12+（本项目验证于 Node.js 24）。
