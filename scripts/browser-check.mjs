@@ -15,7 +15,8 @@ const executablePath = path.join(
   "chrome-headless-shell.exe",
 );
 const browser = await chromium.launch({ headless: true, executablePath });
-const base = process.env.TEST_URL || "http://127.0.0.1:5173";
+const base =
+  process.env.TEST_URL || "http://127.0.0.1:5173/chicago/marathon2026/";
 const results = {
   url: base,
   errors: [],
@@ -30,7 +31,9 @@ const context = await browser.newContext({
 const page = await context.newPage();
 page.on("pageerror", (e) => results.errors.push(e.message));
 page.on("request", (r) => results.requests.push(r.url()));
-await page.goto(base, { waitUntil: "networkidle" });
+const mainResponse = await page.goto(base, { waitUntil: "networkidle" });
+assert.equal(mainResponse.status(), 200);
+results.certificate = await mainResponse.securityDetails();
 await page.locator("[data-closure]").first().waitFor();
 await page.screenshot({ path: `${out}/desktop-overview.png`, fullPage: true });
 results.screenshots.push("desktop-overview.png");
@@ -215,7 +218,7 @@ results.checks.push(
   "390px touch viewport: date/time, search, street detail, no horizontal overflow",
 );
 const externals = results.requests.filter(
-  (u) => !u.startsWith(base) && !u.startsWith("data:"),
+  (u) => !u.startsWith(new URL(base).origin + "/") && !u.startsWith("data:"),
 );
 assert.deepEqual(externals, []);
 results.checks.push(

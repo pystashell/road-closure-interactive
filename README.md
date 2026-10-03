@@ -4,6 +4,10 @@
 
 浏览器只加载本站静态文件。地图采用 OpenStreetMap 实际经纬度，自绘 SVG，无地图 SDK、地图瓦片、运行时地图 API、外部字体、用户定位或密钥。
 
+正式网址：**https://road-closure.catseye.today/chicago/marathon2026**（无尾斜杠）。原 https://road-closure-interactive.pystashell.workers.dev 入口继续可用。
+
+`vite.config.js` 设定资源基路径 `/chicago/marathon2026/`，构建后将完整静态资源复制到对应目录，并保留原根目录入口。Cloudflare Custom Domain 仅绑定 `road-closure.catseye.today`；`assets.html_handling = "drop-trailing-slash"` 使指定路径直接返回页面，尾斜杠版本规范化到无尾斜杠。没有修改父域或其他主机的内容，也不需要运行时 Worker 路径重写。
+
 ## 使用与开发
 
 需要 Node.js 22.12+（本项目验证于 Node.js 24）。

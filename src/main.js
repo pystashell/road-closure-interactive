@@ -9,6 +9,7 @@ import {
   STATUS_LABEL,
 } from "./model.js";
 const $ = (s) => document.querySelector(s);
+const appBase = import.meta.env.BASE_URL;
 const esc = (s) =>
   String(s ?? "").replace(
     /[&<>"']/g,
@@ -55,7 +56,7 @@ const directionLabel = (d) =>
       ? "北向（含东向弯道）"
       : "双向 / 官方未细分";
 $("#app").innerHTML = `
-<header class="site-header"><a class="brand" href="/" aria-label="芝加哥出行图首页"><span class="brand-mark">${svgIcon("map")}</span><span>芝加哥<span class="brand-light"> / 出行图</span></span></a><nav><a href="#sources">资料与说明 ${svgIcon("arrow")}</a><span class="edition">2026 · RACE WEEKEND</span></nav></header>
+<header class="site-header"><a class="brand" href="${appBase}" aria-label="芝加哥出行图首页"><span class="brand-mark">${svgIcon("map")}</span><span>芝加哥<span class="brand-light"> / 出行图</span></span></a><nav><a href="#sources">资料与说明 ${svgIcon("arrow")}</a><span class="edition">2026 · RACE WEEKEND</span></nav></header>
 <main><section class="intro"><div><div class="eyebrow"><span class="tiny-dot"></span> CHICAGO, ILLINOIS · 10.10—10.11</div><h1>芝加哥赛事封路地图<span class="title-dot">。</span></h1><p>选一个时间，查看市中心哪些路段计划封闭、何时预计恢复。</p></div><div class="intro-note"><span>真实路网 · 随站点打包</span><strong>出行前，再核实现场情况 ${svgIcon("arrow")}</strong></div></section>
 <div class="notice" role="note">${svgIcon("info")}<p><strong>这是官方计划，不是实时路况。</strong>警方控制封路与滚动开放；预计时间可能调整。未标注封路、或已过预计恢复时间，均不保证可通行。</p></div>
 <section class="workspace" aria-label="封路时间查询与地图">
@@ -84,7 +85,7 @@ $("#app").innerHTML = `
   )
   .join(
     "",
-  )}<a href="/data/closures.json" download>下载封路记录 JSON ↓</a><a href="/data/geography.json" download>下载离线地理数据（ODbL） ↓</a><p id="geo-snapshot"></p><p>地理数据 © OpenStreetMap contributors，依据 <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a> 提供。下载文件中的每段道路包含原 OSM way ID；转换脚本公开于项目仓库。</p></div></details></div></section>
+  )}<a href="${appBase}data/closures.json" download>下载封路记录 JSON ↓</a><a href="${appBase}data/geography.json" download>下载离线地理数据（ODbL） ↓</a><p id="geo-snapshot"></p><p>地理数据 © OpenStreetMap contributors，依据 <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a> 提供。下载文件中的每段道路包含原 OSM way ID；转换脚本公开于项目仓库。</p></div></details></div></section>
 </main><footer><span>CHICAGO / RACE WEEKEND 2026</span><span>离线路网 · 无地图 API · <a href="https://github.com/pystashell/road-closure-interactive" target="_blank" rel="noopener">项目与数据说明 ↗</a></span></footer><div id="toast" role="status"></div>`;
 function setTime(d, m) {
   day = d;
@@ -532,7 +533,7 @@ function renderDetail() {
   );
 }
 try {
-  const response = await fetch("/data/geography.json");
+  const response = await fetch(`${appBase}data/geography.json`);
   if (!response.ok) throw new Error("地理数据载入失败");
   geo = await response.json();
   const aliases = {
