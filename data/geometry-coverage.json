@@ -1,0 +1,337 @@
+[
+  {
+    "id": "grant-01",
+    "road": "Balbo Dr",
+    "features": 4
+  },
+  {
+    "id": "grant-02",
+    "road": "Balbo Dr",
+    "features": 5
+  },
+  {
+    "id": "grant-03",
+    "road": "Jackson Dr",
+    "features": 4
+  },
+  {
+    "id": "grant-04",
+    "road": "Jackson Dr",
+    "features": 4
+  },
+  {
+    "id": "grant-05",
+    "road": "Columbus Dr",
+    "features": 10
+  },
+  {
+    "id": "grant-06",
+    "road": "Columbus Dr",
+    "features": 8
+  },
+  {
+    "id": "grant-07",
+    "road": "Congress Plaza Dr",
+    "features": 8
+  },
+  {
+    "id": "grant-08",
+    "road": "Ida B. Wells Dr",
+    "features": 12
+  },
+  {
+    "id": "grant-09",
+    "road": "Columbus Dr",
+    "features": 12
+  },
+  {
+    "id": "grant-10",
+    "road": "Roosevelt Rd",
+    "features": 7
+  },
+  {
+    "id": "grant-11",
+    "road": "Monroe St",
+    "features": 10
+  },
+  {
+    "id": "grant-12",
+    "road": "Columbus Dr",
+    "features": 8
+  },
+  {
+    "id": "grant-13",
+    "road": "Michigan Ave",
+    "features": 28
+  },
+  {
+    "id": "grant-14",
+    "road": "Roosevelt Rd",
+    "features": 17
+  },
+  {
+    "id": "grant-15",
+    "road": "Michigan Ave",
+    "features": 20
+  },
+  {
+    "id": "5k-01",
+    "road": "Ida B. Wells Dr",
+    "features": 12
+  },
+  {
+    "id": "5k-02",
+    "road": "E. Congress Plaza Dr",
+    "features": 6
+  },
+  {
+    "id": "5k-03",
+    "road": "Michigan Ave",
+    "features": 8
+  },
+  {
+    "id": "5k-04",
+    "road": "Harrison St",
+    "features": 22
+  },
+  {
+    "id": "5k-05",
+    "road": "State St",
+    "features": 1
+  },
+  {
+    "id": "5k-06",
+    "road": "Franklin St",
+    "features": 8
+  },
+  {
+    "id": "5k-07",
+    "road": "Van Buren St",
+    "features": 1
+  },
+  {
+    "id": "5k-08",
+    "road": "Wacker Dr",
+    "features": 31
+  },
+  {
+    "id": "5k-09",
+    "road": "Wacker Dr",
+    "features": 32
+  },
+  {
+    "id": "5k-10",
+    "road": "Jackson Blvd",
+    "features": 1
+  },
+  {
+    "id": "5k-11",
+    "road": "Wacker Dr",
+    "features": 7
+  },
+  {
+    "id": "marathon-01",
+    "road": "Columbus Dr",
+    "features": 51
+  },
+  {
+    "id": "marathon-02",
+    "road": "Grand Ave",
+    "features": 13
+  },
+  {
+    "id": "marathon-03",
+    "road": "Dearborn St",
+    "features": 23
+  },
+  {
+    "id": "marathon-04",
+    "road": "Jackson Blvd",
+    "features": 4
+  },
+  {
+    "id": "marathon-05",
+    "road": "LaSalle St",
+    "features": 101
+  },
+  {
+    "id": "marathon-06",
+    "road": "Stockton Dr",
+    "features": 0
+  },
+  {
+    "id": "marathon-07",
+    "road": "Fullerton Dr",
+    "features": 0
+  },
+  {
+    "id": "marathon-08",
+    "road": "Cannon Dr",
+    "features": 0
+  },
+  {
+    "id": "marathon-09",
+    "road": "Sheridan Rd",
+    "features": 0
+  },
+  {
+    "id": "marathon-10",
+    "road": "Inner Lake Shore Dr",
+    "features": 0
+  },
+  {
+    "id": "marathon-11",
+    "road": "Sheridan Rd",
+    "features": 0
+  },
+  {
+    "id": "marathon-12",
+    "road": "Broadway",
+    "features": 0
+  },
+  {
+    "id": "marathon-13",
+    "road": "Broadway",
+    "features": 0
+  },
+  {
+    "id": "marathon-14",
+    "road": "Clark St",
+    "features": 0
+  },
+  {
+    "id": "marathon-15",
+    "road": "Clark St",
+    "features": 0
+  },
+  {
+    "id": "marathon-16",
+    "road": "Webster Ave",
+    "features": 0
+  },
+  {
+    "id": "marathon-17",
+    "road": "Sedgwick St",
+    "features": 1
+  },
+  {
+    "id": "marathon-18",
+    "road": "North Ave",
+    "features": 14
+  },
+  {
+    "id": "marathon-19",
+    "road": "Wells St",
+    "features": 3
+  },
+  {
+    "id": "marathon-20",
+    "road": "Wells St",
+    "features": 20
+  },
+  {
+    "id": "marathon-21",
+    "road": "Wacker Dr",
+    "features": 29
+  },
+  {
+    "id": "marathon-22",
+    "road": "Adams St",
+    "features": 24
+  },
+  {
+    "id": "marathon-23",
+    "road": "Damen Ave",
+    "features": 0
+  },
+  {
+    "id": "marathon-24",
+    "road": "Jackson Blvd",
+    "features": 19
+  },
+  {
+    "id": "marathon-25",
+    "road": "Halsted St",
+    "features": 30
+  },
+  {
+    "id": "marathon-26",
+    "road": "Taylor St",
+    "features": 19
+  },
+  {
+    "id": "marathon-27",
+    "road": "Loomis St",
+    "features": 17
+  },
+  {
+    "id": "marathon-28",
+    "road": "18th St",
+    "features": 4
+  },
+  {
+    "id": "marathon-29",
+    "road": "Halsted St",
+    "features": 8
+  },
+  {
+    "id": "marathon-30",
+    "road": "21st St",
+    "features": 2
+  },
+  {
+    "id": "marathon-31",
+    "road": "Canalport Ave",
+    "features": 1
+  },
+  {
+    "id": "marathon-32",
+    "road": "Cermak Rd",
+    "features": 29
+  },
+  {
+    "id": "marathon-33",
+    "road": "Wentworth Ave",
+    "features": 1
+  },
+  {
+    "id": "marathon-34",
+    "road": "26th St",
+    "features": 0
+  },
+  {
+    "id": "marathon-35",
+    "road": "Michigan Ave",
+    "features": 0
+  },
+  {
+    "id": "marathon-36",
+    "road": "35th St",
+    "features": 0
+  },
+  {
+    "id": "marathon-37",
+    "road": "Indiana Ave",
+    "features": 0
+  },
+  {
+    "id": "marathon-38",
+    "road": "31st St",
+    "features": 0
+  },
+  {
+    "id": "marathon-39",
+    "road": "Michigan Ave",
+    "features": 30
+  },
+  {
+    "id": "marathon-40",
+    "road": "Roosevelt Rd",
+    "features": 17
+  },
+  {
+    "id": "marathon-41",
+    "road": "Columbus Dr",
+    "features": 4
+  }
+]

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.wrangler/
+.env*
+.dev.vars*
+data/raw/
+artifacts/
+public/build.json
+worker-configuration.d.ts
